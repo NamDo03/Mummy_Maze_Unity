@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Stair
+  - hWall
+  - vWall
   layers:
   - Default
   - TransparentFX
@@ -40,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1843589303
+    locked: 0
+  - name: Foreground
+    uniqueID: 2561485533
     locked: 0
