@@ -279,7 +279,6 @@ GameObject:
   - component: {fileID: 327299847}
   - component: {fileID: 327299846}
   - component: {fileID: 327299845}
-  - component: {fileID: 327299848}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -361,18 +360,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &327299848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327299844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8c787141fafe7244b2e0735457dfe6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &653636302
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +455,6 @@ GameObject:
   - component: {fileID: 683359300}
   - component: {fileID: 683359299}
   - component: {fileID: 683359301}
-  - component: {fileID: 683359302}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -561,22 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPrefabs:
-  - {fileID: 4730042417770773917, guid: e000330b0380b354b9022ff2a5c697e7, type: 3}
   - {fileID: 4190330206384449001, guid: a87439cf3b77c5740b325ec2166c0d97, type: 3}
-  currentLevel: 0
---- !u!114 &683359302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683359298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 904f0f94df240b348ad157adf59ab34f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelPrefabs: []
   currentLevel: 0
 --- !u!1 &774454635
 GameObject:

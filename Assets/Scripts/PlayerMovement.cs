@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
     public float moveDuration = 0.5f;
+    public float moveDistance = 1f;
 
     private bool isMoving;
     void Start()
@@ -20,13 +21,13 @@ public class PlayerMovement : MonoBehaviour
         if (!isMoving)
         {
             if (Input.GetKeyDown(KeyCode.W))
-                StartCoroutine(Move(Vector3.up));       
+                StartCoroutine(Move(Vector3.up * moveDistance));       
             else if (Input.GetKeyDown(KeyCode.S))
-                StartCoroutine(Move(Vector3.down));     
+                StartCoroutine(Move(Vector3.down * moveDistance));     
             else if (Input.GetKeyDown(KeyCode.A))
-                StartCoroutine(Move(Vector3.left));     
+                StartCoroutine(Move(Vector3.left * moveDistance));     
             else if (Input.GetKeyDown(KeyCode.D))
-                StartCoroutine(Move(Vector3.right));
+                StartCoroutine(Move(Vector3.right * moveDistance ));
         }
     }
 
@@ -36,19 +37,19 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetBool("isMoving", true);
 
-        if (direction == Vector3.up)
+        if (direction == Vector3.up * moveDistance)
         {
             animator.SetInteger("moveDirection", 1); 
         }
-        else if (direction == Vector3.down)
+        else if (direction == Vector3.down * moveDistance)
         {
             animator.SetInteger("moveDirection", 2); 
         }
-        else if (direction == Vector3.left)
+        else if (direction == Vector3.left * moveDistance) 
         {
             animator.SetInteger("moveDirection", 3); 
         }
-        else if (direction == Vector3.right)
+        else if (direction == Vector3.right * moveDistance )
         {
             animator.SetInteger("moveDirection", 4); 
         }

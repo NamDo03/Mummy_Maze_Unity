@@ -116,11 +116,11 @@ TextureImporter:
       name: whitedown_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 60
-      alignment: 6
+        x: 7
+        y: 7
+        width: 52
+        height: 51
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -129,6 +129,90 @@ TextureImporter:
       bones: []
       spriteID: 93ab8020d2570584c80357abbeef64c2
       internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whitedown_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 5
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079f6f3016cf79a42827a5e32f69dfb4
+      internalID: -218093471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whitedown_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 3
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa792b736d7aa946a839f869228dc19
+      internalID: -1552489297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whitedown_3
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 5
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76962905ef6ef0543b12e0e631f622a7
+      internalID: 568792857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whitedown_4
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 3
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb1881ac2672e146ab7250e68aea9c2
+      internalID: 1904661797
       vertices: []
       indices: 
       edges: []
@@ -145,6 +229,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       whitedown_0: 21300000
+      whitedown_1: -218093471
+      whitedown_2: -1552489297
+      whitedown_3: 568792857
+      whitedown_4: 1904661797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
