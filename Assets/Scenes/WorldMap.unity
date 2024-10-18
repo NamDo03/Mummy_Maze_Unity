@@ -294,7 +294,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184351181}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 54ae1b742905f5740988e49bc289073f, type: 3}
@@ -536,10 +536,10 @@ PrefabInstance:
       addedObject: {fileID: 1253185394}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1253185393}
+      addedObject: {fileID: 1253185392}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1253185392}
+      addedObject: {fileID: 1253185393}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &224602122 stripped
 Transform:
@@ -699,7 +699,7 @@ Camera:
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 0
+  m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &519420032
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 2
 --- !u!114 &723833028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 9
 --- !u!114 &841129020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 3
 --- !u!114 &1085254538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,7 +1370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 10
 --- !u!114 &1253185393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 14
 --- !u!114 &1320669235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1687,16 +1687,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1529594907}
-    - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1529594906}
-    - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1529594905}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1529594904}
+    - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1529594907}
+    - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1529594906}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1330520468 stripped
 Transform:
@@ -1868,7 +1868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 5
 --- !u!114 &1389256443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2046,7 +2046,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: a78fce73fc0aedc4f8c417244bdf831f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2143,9 +2143,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+
   m_Sprite: {fileID: 21300000, guid: 03b33ca17b4a8f34299d5fc0c7baaa9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2291,12 +2292,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529594903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de732f5864a5c044e88d5f3dad8bf64a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 0}
-  hoverTexture: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
-  downTexture: {fileID: 21300000, guid: 908e2f3ea6c12914c84cbbf48d76e0de, type: 3}
+  level: 12
 --- !u!114 &1529594907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2306,10 +2305,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529594903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
+  m_Script: {fileID: 11500000, guid: de732f5864a5c044e88d5f3dad8bf64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  texture: {fileID: 0}
+  hoverTexture: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
+  downTexture: {fileID: 21300000, guid: 908e2f3ea6c12914c84cbbf48d76e0de, type: 3}
 --- !u!1 &1590288858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
@@ -2327,7 +2328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 7
 --- !u!114 &1590288860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2591,7 +2592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 6
 --- !u!114 &1671142572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2883,10 +2884,10 @@ PrefabInstance:
       addedObject: {fileID: 1764474652}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1764474651}
+      addedObject: {fileID: 1764474650}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1764474650}
+      addedObject: {fileID: 1764474651}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1764474648 stripped
 Transform:
@@ -2925,7 +2926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 13
 --- !u!60 &1764474652
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3186,7 +3187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 8
 --- !u!114 &1824239967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3329,7 +3330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 4
 --- !u!114 &1937352261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3536,7 +3537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 1
 --- !u!114 &2058713835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3718,10 +3719,10 @@ PrefabInstance:
       addedObject: {fileID: 1103021186286939660}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1103021186286939659}
+      addedObject: {fileID: 1103021186286939658}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1103021186286939658}
+      addedObject: {fileID: 1103021186286939659}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1103021186286939661}
@@ -3863,7 +3864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fafc1a49af457149a4e3ccb2db55dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 11
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
