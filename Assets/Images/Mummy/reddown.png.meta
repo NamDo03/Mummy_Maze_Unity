@@ -116,11 +116,11 @@ TextureImporter:
       name: reddown_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 60
-      alignment: 6
+        x: 7
+        y: 7
+        width: 52
+        height: 51
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -129,6 +129,90 @@ TextureImporter:
       bones: []
       spriteID: 848169ea09056204b8eed6afdffd2d0a
       internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reddown_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 5
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9465fd9ddbbf8ba49a8a18aac25c634f
+      internalID: -1375834143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reddown_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 3
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0619fa2450d664f8582b59dba2b0ad
+      internalID: 1050908434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reddown_3
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 5
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e988ce6cf1b59534f96d4ba40fdae717
+      internalID: 1606740066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reddown_4
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 3
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e4318eedf4e604cbdb9fc9d15476b1
+      internalID: -788567625
       vertices: []
       indices: 
       edges: []
@@ -145,6 +229,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       reddown_0: 21300000
+      reddown_1: -1375834143
+      reddown_2: 1050908434
+      reddown_3: 1606740066
+      reddown_4: -788567625
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
