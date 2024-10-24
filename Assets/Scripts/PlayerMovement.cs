@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public float moveDuration = 0.5f;
     public float moveDistance = 1f;
 
-    private bool isMoving;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -17,24 +16,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        UpdateIdleDirection();
-        if (!isMoving)
-        {
-            if (Input.GetKeyDown(KeyCode.W))
-                StartCoroutine(Move(Vector3.up * moveDistance));       
-            else if (Input.GetKeyDown(KeyCode.S))
-                StartCoroutine(Move(Vector3.down * moveDistance));     
-            else if (Input.GetKeyDown(KeyCode.A))
-                StartCoroutine(Move(Vector3.left * moveDistance));     
-            else if (Input.GetKeyDown(KeyCode.D))
-                StartCoroutine(Move(Vector3.right * moveDistance ));
-        }
+
     }
 
-    public IEnumerator Move(Vector3 direction)
+    public IEnumerator Move(Vector3 direction, bool isBlocked)
     {
-        isMoving = true;
-
+        if (isBlocked) yield break;
+        direction *= moveDistance;
         animator.SetBool("isMoving", true);
 
         if (direction == Vector3.up * moveDistance)
@@ -59,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
 
         float elapsed = 0;
 
-
         while (elapsed < moveDuration)
         {
             transform.position = Vector3.Lerp(startPosition, targetPosition, elapsed / moveDuration);
@@ -69,22 +56,35 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = targetPosition;
         animator.SetBool("isMoving", false);
-        isMoving = false;
     }
-    private void UpdateIdleDirection()
+    public void UpdateIdleDirection(Vector3? next_move = null)
     {
         float horizontal = 0;
         float vertical = 0;
+        if (next_move.HasValue)
+        {
+            
+            if (next_move == Vector3.up)
+                vertical = 1;
+            else if (next_move == Vector3.down)
+                vertical = -1;
 
-        if (Input.GetKey(KeyCode.W))
-            vertical = 1; 
-        else if (Input.GetKey(KeyCode.S))
-            vertical = -1; 
+            if (next_move == Vector3.left)
+                horizontal = -1;
+            else if (next_move == Vector3.right)
+                horizontal = 1;
+        } else
+        {
+            if (Input.GetKey(KeyCode.W))
+                vertical = 1;
+            else if (Input.GetKey(KeyCode.S))
+                vertical = -1;
 
-        if (Input.GetKey(KeyCode.A))
-            horizontal = -1; 
-        else if (Input.GetKey(KeyCode.D))
-            horizontal = 1;
+            if (Input.GetKey(KeyCode.A))
+                horizontal = -1;
+            else if (Input.GetKey(KeyCode.D))
+                horizontal = 1;
+        }
 
         if (horizontal != 0 || vertical != 0)
         {
