@@ -186,10 +186,10 @@ PrefabInstance:
       addedObject: {fileID: 723833029}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 723833028}
+      addedObject: {fileID: 723833027}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 723833027}
+      addedObject: {fileID: 723833028}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &17197981 stripped
 Transform:
@@ -260,144 +260,16 @@ PrefabInstance:
       addedObject: {fileID: 1590288861}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1590288860}
+      addedObject: {fileID: 1590288859}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1590288859}
+      addedObject: {fileID: 1590288860}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &17639319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1344920044800675156, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
   m_PrefabInstance: {fileID: 17639318}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &184351181
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 184351183}
-  - component: {fileID: 184351182}
-  m_Layer: 0
-  m_Name: audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &184351182
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184351181}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 54ae1b742905f5740988e49bc289073f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &184351183
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184351181}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &188890049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -462,10 +334,10 @@ PrefabInstance:
       addedObject: {fileID: 1320669236}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1320669235}
+      addedObject: {fileID: 1320669234}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1320669234}
+      addedObject: {fileID: 1320669235}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &188890050 stripped
 Transform:
@@ -610,10 +482,10 @@ PrefabInstance:
       addedObject: {fileID: 1085254536}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1085254538}
+      addedObject: {fileID: 1085254537}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1085254537}
+      addedObject: {fileID: 1085254538}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &454559368 stripped
 Transform:
@@ -635,7 +507,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -643,14 +514,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -781,10 +644,10 @@ PrefabInstance:
       addedObject: {fileID: 1824239968}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1824239967}
+      addedObject: {fileID: 1824239966}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1824239966}
+      addedObject: {fileID: 1824239967}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &681846496 stripped
 Transform:
@@ -839,8 +702,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -998,10 +861,10 @@ PrefabInstance:
       addedObject: {fileID: 841129021}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 841129020}
+      addedObject: {fileID: 841129019}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 841129019}
+      addedObject: {fileID: 841129020}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &841129018 stripped
 Transform:
@@ -1127,8 +990,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1184,8 +1047,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1343,10 +1206,10 @@ PrefabInstance:
       addedObject: {fileID: 1781248345}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1781248344}
+      addedObject: {fileID: 1781248343}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1781248343}
+      addedObject: {fileID: 1781248344}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1180005721 stripped
 Transform:
@@ -1477,8 +1340,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1615,8 +1478,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1693,10 +1556,10 @@ PrefabInstance:
       addedObject: {fileID: 1529594904}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1529594907}
+      addedObject: {fileID: 1529594906}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1529594906}
+      addedObject: {fileID: 1529594907}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1330520468 stripped
 Transform:
@@ -1767,10 +1630,10 @@ PrefabInstance:
       addedObject: {fileID: 1937352262}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1937352261}
+      addedObject: {fileID: 1937352260}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1937352260}
+      addedObject: {fileID: 1937352261}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1354052463 stripped
 Transform:
@@ -1841,10 +1704,10 @@ PrefabInstance:
       addedObject: {fileID: 1389256444}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1389256443}
+      addedObject: {fileID: 1389256442}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1389256442}
+      addedObject: {fileID: 1389256443}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1374900685 stripped
 Transform:
@@ -1975,8 +1838,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2044,9 +1907,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1843589303
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a78fce73fc0aedc4f8c417244bdf831f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2146,7 +2009,6 @@ SpriteRenderer:
   m_SortingLayerID: -1733481763
   m_SortingLayer: 2
   m_SortingOrder: 0
-
   m_Sprite: {fileID: 21300000, guid: 03b33ca17b4a8f34299d5fc0c7baaa9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2269,8 +2131,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2435,8 +2297,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2518,10 +2380,10 @@ PrefabInstance:
       addedObject: {fileID: 1671142573}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1671142572}
+      addedObject: {fileID: 1671142571}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1671142571}
+      addedObject: {fileID: 1671142572}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1671142569 stripped
 Transform:
@@ -2566,8 +2428,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2719,8 +2581,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1843589303
-  m_SortingLayer: 1
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 38cab1dd7db42404f824133577d6110e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2884,10 +2746,10 @@ PrefabInstance:
       addedObject: {fileID: 1764474652}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1764474650}
+      addedObject: {fileID: 1764474651}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1764474651}
+      addedObject: {fileID: 1764474650}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1764474648 stripped
 Transform:
@@ -3018,8 +2880,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3156,8 +3018,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3294,8 +3156,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3437,8 +3299,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3515,10 +3377,10 @@ PrefabInstance:
       addedObject: {fileID: 2058713836}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2058713835}
+      addedObject: {fileID: 2058713834}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2058713834}
+      addedObject: {fileID: 2058713835}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &2058713833 stripped
 Transform:
@@ -3644,8 +3506,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3722,10 +3584,10 @@ PrefabInstance:
       addedObject: {fileID: 1103021186286939658}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1103021186286939659}
+      addedObject: {fileID: 1103021186286939661}
     - targetCorrespondingSourceObject: {fileID: 2858541246822037128, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1103021186286939661}
+      addedObject: {fileID: 1103021186286939659}
   m_SourcePrefab: {fileID: 100100000, guid: 08366a1ec3e68f04989a86e2ae04d856, type: 3}
 --- !u!4 &1103021186286939657 stripped
 Transform:
@@ -3838,8 +3700,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1733481763
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9357bc8742148a3449b729048556d58d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3873,4 +3735,3 @@ SceneRoots:
   - {fileID: 1477063254}
   - {fileID: 1707795691}
   - {fileID: 1407879069}
-  - {fileID: 184351183}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class LevelController : MonoBehaviour
     public bool idle;
     public PlayerMovement player;
     public List<PlayerMovement> mummies;
+    public GameObject winGameScreen;
+    public GameObject loseGameScreen;
     //public Stack checkpoints = new Stack();
 
     // Static
@@ -78,6 +81,10 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null || mummies == null)
+        {
+            return;
+        }
         player.UpdateIdleDirection(null);
         foreach (var mummy in mummies)
         {
@@ -219,8 +226,8 @@ public class LevelController : MonoBehaviour
     {
         foreach (var mummy in mummies)
         {
-            if (mummy.transform.localPosition == player.transform.localPosition)
-                return true;
+            if (mummy.transform.localPosition == player.transform.localPosition)        
+                    return true;       
         }
         return false;
     }
@@ -257,24 +264,30 @@ public class LevelController : MonoBehaviour
     IEnumerator Victory()
     {
         yield return player.Move(stairDirection, false);
-
+        
         Destroy(player.gameObject);
         foreach (var mummy in mummies)
             Destroy(mummy.gameObject);
+        mummies.Clear();
 
         yield return new WaitForSeconds(0.5f);
-        //Instantiate(winOverlay, transform, true);
+        Vector3 position = new Vector3(3, 3.33f, 0);
+        Quaternion rotation = Quaternion.identity;
+        Instantiate(winGameScreen, position, rotation);
     }
-
     IEnumerator Lost()
     {
-        Vector3 position = player.transform.localPosition;
-
         Destroy(player.gameObject);
-        foreach (var mummy in mummies)
-            Destroy(mummy.gameObject);
-
-        yield return new WaitForSeconds(0.5f);
-        //Instantiate(loseOverlay, transform, true);
+        foreach (var mummy in mummies) 
+        {
+            mummy.Fighting();
+            yield return new WaitForSeconds(1.5f);
+            Destroy(mummy.gameObject); 
+        }    
+        mummies.Clear();
+        yield return new WaitForSeconds(1f);
+        Vector3 position = new Vector3(2, 3, 0);
+        Quaternion rotation = Quaternion.identity;    
+        Instantiate(loseGameScreen, position, rotation);
     }
 }

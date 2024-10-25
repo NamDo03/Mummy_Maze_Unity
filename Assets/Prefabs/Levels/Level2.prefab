@@ -384,6 +384,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 686520341152195197}
     m_Modifications:
+    - target: {fileID: 1047942244402320517, guid: f36313366d1eebf45b3962820d48537a, type: 3}
+      propertyPath: loseGameScreen
+      value: 
+      objectReference: {fileID: 2361058804205086836, guid: d7b29238cc163da4f938eb012272ec2b, type: 3}
     - target: {fileID: 2117953829849881064, guid: f36313366d1eebf45b3962820d48537a, type: 3}
       propertyPath: m_Name
       value: MummyWhite
@@ -446,6 +450,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 686520341152195197}
     m_Modifications:
+    - target: {fileID: 2356655311098328231, guid: 8fee593fc74d8854e9e9358adea2ea0c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6828682993248479937, guid: 8fee593fc74d8854e9e9358adea2ea0c, type: 3}
       propertyPath: m_Name
       value: VerticalWall4
@@ -634,7 +642,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6268166551153068247, guid: 4f6ea16b34e68d743bdb00bff000d077, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4221512918638482334, guid: 4f6ea16b34e68d743bdb00bff000d077, type: 3}
       propertyPath: m_Name
@@ -997,6 +1005,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8540648561039459339, guid: 0196064b38022344cb992fa0327dc30a, type: 3}
+      propertyPath: winGameScreen
+      value: 
+      objectReference: {fileID: 428831748004763474, guid: 1198b20d75969d442becf032be4ac972, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1079,7 +1091,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2356655311098328231, guid: 8fee593fc74d8854e9e9358adea2ea0c, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6828682993248479937, guid: 8fee593fc74d8854e9e9358adea2ea0c, type: 3}
       propertyPath: m_Name
@@ -1267,9 +1279,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 686520341152195197}
     m_Modifications:
+    - target: {fileID: 2697648166315777667, guid: 374c2d6bbcae33e449596f449dab5579, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3233785860958825349, guid: 374c2d6bbcae33e449596f449dab5579, type: 3}
       propertyPath: m_Name
       value: LeftStair
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812409136346823363, guid: 374c2d6bbcae33e449596f449dab5579, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8423589662177113759, guid: 374c2d6bbcae33e449596f449dab5579, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1314,10 +1334,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3233785860958825349, guid: 374c2d6bbcae33e449596f449dab5579, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1081238175978313306}
   m_SourcePrefab: {fileID: 100100000, guid: 374c2d6bbcae33e449596f449dab5579, type: 3}
 --- !u!4 &797799513986089981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8423589662177113759, guid: 374c2d6bbcae33e449596f449dab5579, type: 3}
   m_PrefabInstance: {fileID: 9220205738421843298}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5986541057817927399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3233785860958825349, guid: 374c2d6bbcae33e449596f449dab5579, type: 3}
+  m_PrefabInstance: {fileID: 9220205738421843298}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1081238175978313306
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5986541057817927399}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
