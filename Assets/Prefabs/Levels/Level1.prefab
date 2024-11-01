@@ -250,25 +250,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4984245614483688851, guid: 0196064b38022344cb992fa0327dc30a, type: 3}
-      propertyPath: m_SortingLayer
+    - target: {fileID: 8540648561039459339, guid: 0196064b38022344cb992fa0327dc30a, type: 3}
+      propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4984245614483688851, guid: 0196064b38022344cb992fa0327dc30a, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1843589303
-      objectReference: {fileID: 0}
-    - target: {fileID: 8540648561039459339, guid: 0196064b38022344cb992fa0327dc30a, type: 3}
-      propertyPath: winOverlay
-      value: 
-      objectReference: {fileID: 428831748004763474, guid: 1198b20d75969d442becf032be4ac972, type: 3}
-    - target: {fileID: 8540648561039459339, guid: 0196064b38022344cb992fa0327dc30a, type: 3}
-      propertyPath: winGameScreen
-      value: 
-      objectReference: {fileID: 428831748004763474, guid: 1198b20d75969d442becf032be4ac972, type: 3}
-    - target: {fileID: 8540648561039459339, guid: 0196064b38022344cb992fa0327dc30a, type: 3}
-      propertyPath: stairPosition.x
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

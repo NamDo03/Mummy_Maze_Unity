@@ -5,13 +5,24 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Animator animator;
-
+    private PlayerStats playerStats;
     public float moveDuration = 0.5f;
     public float moveDistance = 1f;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        playerStats = GetComponent<PlayerStats>();
+        GameObject cameraObject = Camera.main.gameObject;  
+        if (cameraObject != null)
+        {
+            playerStats = cameraObject.GetComponent<PlayerStats>(); 
+        }
+
+        if (playerStats == null)
+        {
+            Debug.LogError("PlayerStats not found on the Camera! Ensure PlayerStats script is attached to the Camera.");
+        }
     }
 
     void Update()
@@ -25,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
         if (isBlocked) yield break;
         direction *= moveDistance;
         animator.SetBool("isMoving", true);
+
+        if (CompareTag("Player"))
+        {
+            playerStats.AddStep();
+        }
 
         if (direction == Vector3.up * moveDistance)
         {
