@@ -858,6 +858,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3134412543629833712}
     m_Modifications:
+    - target: {fileID: -2332881543344784113, guid: 1e456d1d1af6d314fbb241ab3e0df8b4, type: 3}
+      propertyPath: loseGameScreen
+      value: 
+      objectReference: {fileID: 2361058804205086836, guid: d7b29238cc163da4f938eb012272ec2b, type: 3}
     - target: {fileID: 1711047580002582206, guid: 1e456d1d1af6d314fbb241ab3e0df8b4, type: 3}
       propertyPath: m_Name
       value: Red8
@@ -1348,15 +1352,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3630943155409084730, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630943155409084730, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630943155409084730, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1733481763
+      objectReference: {fileID: 0}
     - target: {fileID: 8150197386526156079, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
       propertyPath: m_Name
       value: UStair8
       objectReference: {fileID: 0}
+    - target: {fileID: 8150197386526156079, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
+      propertyPath: m_TagString
+      value: Stair
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711841966778128130, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8150197386526156079, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 722998561751178509}
   m_SourcePrefab: {fileID: 100100000, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
+--- !u!1 &1857857320558024499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8150197386526156079, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
+  m_PrefabInstance: {fileID: 7553449395942666780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &722998561751178509
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857857320558024499}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &8553856851310308587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2190536437821693687, guid: c51609c94e7be0f43ba54395d69024dd, type: 3}
@@ -1562,11 +1621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3757689719905389955, guid: 50190e2cd238b4a4eb4139cdc77dfa4b, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3757689719905389955, guid: 50190e2cd238b4a4eb4139cdc77dfa4b, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1733481763
+      value: 1843589303
       objectReference: {fileID: 0}
     - target: {fileID: 5895279261620400686, guid: 50190e2cd238b4a4eb4139cdc77dfa4b, type: 3}
       propertyPath: m_LocalPosition.x

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 959994393239141524}
   - component: {fileID: -2694963751770418434}
+  - component: {fileID: 6183438458622168074}
   m_Layer: 0
   m_Name: map8
   m_TagString: Untagged
@@ -84,3 +85,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6183438458622168074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020486023809952909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8bc2550201be040bd8ecaec678ee6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idle: 0
+  player: {fileID: 0}
+  mummies: []
+  winGameScreen: {fileID: 428831748004763474, guid: 1198b20d75969d442becf032be4ac972, type: 3}
+  loseGameScreen: {fileID: 2361058804205086836, guid: d7b29238cc163da4f938eb012272ec2b, type: 3}
+  size: 8
