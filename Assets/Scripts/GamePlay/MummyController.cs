@@ -26,7 +26,7 @@ public class MummyController : MonoBehaviour
             animator.SetBool("isDust", true);
             StartCoroutine(PlayDustAndWhiteFight());
         }
-        if (collision.CompareTag("Mummy") && !isCollidingWithMummy)
+        if ((collision.CompareTag("MummyWhite") || collision.CompareTag("MummyRed")) && !isCollidingWithMummy)
         {
             isCollidingWithMummy = true;
 

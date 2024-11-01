@@ -37,7 +37,10 @@ public class PlayerMovement : MonoBehaviour
         direction *= moveDistance;
         animator.SetBool("isMoving", true);
 
-        playerStats.AddStep();
+        if (CompareTag("Player"))
+        {
+            playerStats.AddStep();
+        }
 
         if (direction == Vector3.up * moveDistance)
         {
