@@ -31,6 +31,10 @@ public class PlayerStats : MonoBehaviour
     {
         stepCount++;
     }
+    public void MinusStep()
+    {
+        stepCount--;
+    }
     private IEnumerator TrackPlayTime()
     {
         while (isPlaying)
