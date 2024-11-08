@@ -12,17 +12,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        playerStats = GetComponent<PlayerStats>();
-        GameObject cameraObject = Camera.main.gameObject;  
-        if (cameraObject != null)
-        {
-            playerStats = cameraObject.GetComponent<PlayerStats>(); 
-        }
-
-        if (playerStats == null)
-        {
-            Debug.LogError("PlayerStats not found on the Camera! Ensure PlayerStats script is attached to the Camera.");
-        }
+        playerStats = FindObjectOfType<PlayerStats>();
     }
 
     void Update()
@@ -74,17 +64,21 @@ public class PlayerMovement : MonoBehaviour
         transform.position = targetPosition;
         animator.SetBool("isMoving", false);
     }
-    public void Fighting()
+    public void Fighting(bool isMummy)
     {
         animator.SetBool("isDust", true);
-        StartCoroutine(PlayDustAndWhiteFight());
+        StartCoroutine(PlayDustAndWhiteFight(isMummy));
     }
 
-    private IEnumerator PlayDustAndWhiteFight()
+    private IEnumerator PlayDustAndWhiteFight(bool isMummy)
     {
         yield return new WaitForSeconds(1.0f);  
         animator.SetBool("isDust", false);
-        animator.SetBool("isFight", true);
+        if(!isMummy)
+        {
+            animator.SetBool("isFight", true);
+
+        }
     }
 
     public void UpdateIdleDirection(Vector3? next_move = null)

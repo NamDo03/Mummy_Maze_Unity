@@ -13,7 +13,8 @@ public class LevelController : MonoBehaviour
     public List<PlayerMovement> mummies;
     public GameObject winGameScreen;
     public GameObject loseGameScreen;
-    //public Stack checkpoints = new Stack();
+    private Stack<GameState> undoStack = new Stack<GameState>();
+    private PlayerStats playerStats;
 
     // Static
     public int size;
@@ -24,6 +25,21 @@ public class LevelController : MonoBehaviour
     Vector3 stairDirection;
     //bool restrictedVision = false;
 
+    public class GameState
+    {
+        public Vector3 playerPosition;
+        public List<Vector3> mummyPositions;
+
+        public GameState(PlayerMovement player, List<PlayerMovement> mummies)
+        {
+            playerPosition = player.transform.localPosition;
+            mummyPositions = new List<Vector3>();
+            foreach (var mummy in mummies)
+            {
+                mummyPositions.Add(mummy.transform.localPosition);
+            }
+        }
+    }
     void Awake()
     {
         idle = true;
@@ -35,6 +51,8 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
+        playerStats = FindObjectOfType<PlayerStats>();
+
         int n = size;
         foreach (Transform t in transform)
         {
@@ -81,7 +99,11 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player == null || mummies == null)
+        if (Input.GetKeyDown(KeyCode.Z)) 
+        {
+            Undo();
+        }
+        if (player == null || mummies == null)
         {
             return;
         }
@@ -107,6 +129,7 @@ public class LevelController : MonoBehaviour
 
     IEnumerator Action(Vector3 direction)
     {
+        SaveGameState();
 
         // Player move 1 step
         if (Blocked(player.transform.localPosition, direction)) yield break;
@@ -119,13 +142,14 @@ public class LevelController : MonoBehaviour
         {
             yield return MummiesMove();
 
-            if (MummiesCatch())
+            PlayerMovement mummyCatch = MummiesCatch();
+            if (mummyCatch)
             {
-                yield return Lost();
+                yield return Lost(mummyCatch);
                 yield break;
             }
 
-            //yield return MummiesFight();
+            yield return MummiesFight();
         }
         if (IsWin(player.transform.localPosition))
         {
@@ -222,15 +246,48 @@ public class LevelController : MonoBehaviour
         yield return StartCoroutine(PromiseAll(coroutines.ToArray()));
     }
 
-    bool MummiesCatch()
+    PlayerMovement MummiesCatch()
     {
         foreach (var mummy in mummies)
         {
             if (mummy.transform.localPosition == player.transform.localPosition)        
-                    return true;       
+                    return mummy;       
         }
-        return false;
+        return null;
     }
+
+    IEnumerator MummiesFight()
+    {
+        var positions = new Dictionary<Vector3, List<PlayerMovement>>();
+
+        foreach (var mummy in mummies)
+        {
+            Vector3 key = mummy.transform.localPosition;
+            if (!positions.ContainsKey(key))
+                positions.Add(key, new List<PlayerMovement>());
+
+            positions[key].Add(mummy);
+        }
+
+        foreach (var item in positions)
+        {
+            if (item.Value.Count <= 1) continue; 
+
+            var preservedMummy = item.Value[0]; 
+            item.Value.RemoveAt(0);
+
+            var mummyToDestroy = item.Value[0]; 
+            mummies.Remove(mummyToDestroy); 
+            Destroy(mummyToDestroy.gameObject); 
+
+            preservedMummy.Fighting(true); 
+
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        yield return null; 
+    }
+
 
     IEnumerator PromiseAll(params IEnumerator[] coroutines)
     {
@@ -274,14 +331,17 @@ public class LevelController : MonoBehaviour
         Vector3 position = new Vector3(3, 3.33f, 0);
         Quaternion rotation = Quaternion.identity;
         Instantiate(winGameScreen, position, rotation);
+        playerStats.StopGame();
     }
-    IEnumerator Lost()
+    IEnumerator Lost(PlayerMovement mummyCatch)
     {
         Destroy(player.gameObject);
         foreach (var mummy in mummies) 
         {
-            mummy.Fighting();
-            yield return new WaitForSeconds(1.5f);
+            if (mummyCatch == mummy) { 
+                mummy.Fighting(false); //Dust Animation
+                yield return new WaitForSeconds(1.5f);
+            }
             Destroy(mummy.gameObject); 
         }    
         mummies.Clear();
@@ -289,5 +349,29 @@ public class LevelController : MonoBehaviour
         Vector3 position = new Vector3(2, 3, 0);
         Quaternion rotation = Quaternion.identity;    
         Instantiate(loseGameScreen, position, rotation);
+        playerStats.StopGame();
+    }
+
+    private void SaveGameState()
+    {
+        undoStack.Push(new GameState(player, mummies));
+    }
+    public void Undo()
+    {
+        if (undoStack.Count > 0)
+        {
+            GameState previousState = undoStack.Pop();
+            player.transform.localPosition = previousState.playerPosition;
+
+            for (int i = 0; i < mummies.Count && i < previousState.mummyPositions.Count; i++)
+            {
+                mummies[i].transform.localPosition = previousState.mummyPositions[i];
+            }
+            playerStats.MinusStep();
+        }
+        else
+        {
+            Debug.Log("No states to undo.");
+        }
     }
 }
