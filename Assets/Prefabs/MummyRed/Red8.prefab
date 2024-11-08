@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -5922456544406875613}
   - component: {fileID: -7272856131176601606}
   - component: {fileID: 8571406766533287596}
-  - component: {fileID: -2332881543344784113}
   - component: {fileID: 73808945227352707}
   m_Layer: 0
   m_Name: Red8
@@ -172,18 +171,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-2332881543344784113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711047580002582206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8c5e6f04c1e1a347be3cdf2ebade62c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &73808945227352707
 MonoBehaviour:
   m_ObjectHideFlags: 0
