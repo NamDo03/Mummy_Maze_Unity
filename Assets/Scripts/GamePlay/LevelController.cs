@@ -331,6 +331,7 @@ public class LevelController : MonoBehaviour
         Vector3 position = new Vector3(3, 3.33f, 0);
         Quaternion rotation = Quaternion.identity;
         Instantiate(winGameScreen, position, rotation);
+        GameGlobal.highestLevelUnlocked++;
         playerStats.StopGame();
     }
     IEnumerator Lost(PlayerMovement mummyCatch)

@@ -9,6 +9,7 @@ TagManager:
   - vWall
   - MummyWhite
   - MummyRed
+  - Level
   layers:
   - Default
   - TransparentFX

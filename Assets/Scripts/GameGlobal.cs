@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public static class GameGlobal
 {
     public static int level = 0;
+    public static int highestLevelUnlocked = 0;
+    public static TextMeshProUGUI messageText;
 
     public static void Play(int lv)
     {
@@ -27,4 +27,10 @@ public static class GameGlobal
     {
         SceneManager.LoadScene("WorldMap");
     }
+
+    public static void ShowMessage(string message)
+    {
+        messageText.text = message;
+    }
+
 }
