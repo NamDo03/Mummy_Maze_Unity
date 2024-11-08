@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 177532094}
   - component: {fileID: 177532095}
   - component: {fileID: 177532096}
+  - component: {fileID: 177532097}
   m_Layer: 0
   m_Name: Options Button
   m_TagString: Untagged
@@ -371,6 +372,19 @@ MonoBehaviour:
   texture: {fileID: 0}
   hoverTexture: {fileID: 21300008, guid: 4578edeb18084db44914472ba08c08e0, type: 3}
   downTexture: {fileID: 21300010, guid: 4578edeb18084db44914472ba08c08e0, type: 3}
+--- !u!114 &177532097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177532092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2d1e2561ee1034d83e56f77d2bb698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToShow: {fileID: 428831748004763474, guid: 3bd94547a1e7d94439841e815f9c8c4f, type: 3}
 --- !u!1 &327299844
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327299847}
   - component: {fileID: 327299846}
+  - component: {fileID: 327299848}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -454,6 +469,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &327299848
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327299844}
+  m_Enabled: 1
 --- !u!1 &653636302
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +841,7 @@ GameObject:
   - component: {fileID: 774454638}
   - component: {fileID: 774454637}
   - component: {fileID: 774454639}
+  - component: {fileID: 774454640}
   m_Layer: 0
   m_Name: Reset Button
   m_TagString: Untagged
@@ -952,6 +976,18 @@ MonoBehaviour:
   texture: {fileID: 0}
   hoverTexture: {fileID: 21300004, guid: 4578edeb18084db44914472ba08c08e0, type: 3}
   downTexture: {fileID: 21300006, guid: 4578edeb18084db44914472ba08c08e0, type: 3}
+--- !u!114 &774454640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774454635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dad7ff3849f94144aad8ba50915f521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &858548872
 GameObject:
   m_ObjectHideFlags: 0

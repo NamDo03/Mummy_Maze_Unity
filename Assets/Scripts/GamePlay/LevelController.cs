@@ -24,6 +24,7 @@ public class LevelController : MonoBehaviour
     Vector3 stairPosition;
     Vector3 stairDirection;
     //bool restrictedVision = false;
+    AudioManager audioManager;
 
     public class GameState
     {
@@ -47,6 +48,7 @@ public class LevelController : MonoBehaviour
         verticalWall = new int[size, size];
         horizontalWall = new int[size, size];
         tranfromMap = size == 6 ? 1f : 0.75f;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Start()
@@ -90,7 +92,7 @@ public class LevelController : MonoBehaviour
                     horizontalWall[x, y] = 1;
                     break;
                 default:
-                    Debug.Log("Unexpected game object with tag: " + t.tag);
+
                     break;
             }
         }
@@ -282,7 +284,7 @@ public class LevelController : MonoBehaviour
 
             preservedMummy.Fighting(true); 
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2.5f);
         }
 
         yield return null; 
@@ -330,6 +332,7 @@ public class LevelController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Vector3 position = new Vector3(3, 3.33f, 0);
         Quaternion rotation = Quaternion.identity;
+        audioManager.PlaySFX(audioManager.wingame);
         Instantiate(winGameScreen, position, rotation);
         GameGlobal.highestLevelUnlocked++;
         playerStats.StopGame();
@@ -341,14 +344,15 @@ public class LevelController : MonoBehaviour
         {
             if (mummyCatch == mummy) { 
                 mummy.Fighting(false); //Dust Animation
-                yield return new WaitForSeconds(1.5f);
+                yield return new WaitForSeconds(2.5f);
             }
             Destroy(mummy.gameObject); 
         }    
         mummies.Clear();
         yield return new WaitForSeconds(1f);
         Vector3 position = new Vector3(2, 3, 0);
-        Quaternion rotation = Quaternion.identity;    
+        Quaternion rotation = Quaternion.identity;
+        audioManager.PlaySFX(audioManager.losegame);
         Instantiate(loseGameScreen, position, rotation);
         playerStats.StopGame();
     }

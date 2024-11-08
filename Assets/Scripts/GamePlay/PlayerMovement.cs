@@ -9,6 +9,12 @@ public class PlayerMovement : MonoBehaviour
     public float moveDuration = 0.5f;
     public float moveDistance = 1f;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -48,7 +54,14 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetInteger("moveDirection", 4); 
         }
-
+        if (gameObject.CompareTag("Player"))
+        {
+            audioManager.PlaySFX(audioManager.footstep);
+        }
+        if (gameObject.CompareTag("MummyWhite") || gameObject.CompareTag("MummyRed"))
+        {
+            audioManager.PlaySFX(audioManager.footstep);
+        }
         Vector3 startPosition = transform.position;
         Vector3 targetPosition = startPosition + direction;
 
@@ -72,12 +85,17 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator PlayDustAndWhiteFight(bool isMummy)
     {
-        yield return new WaitForSeconds(1.0f);  
-        animator.SetBool("isDust", false);
-        if(!isMummy)
+        for (int i = 0; i < 3; i++)
         {
+            audioManager?.PlaySFX(audioManager.fight);
+            yield return new WaitForSeconds(0.5f);
+        }
+        animator.SetBool("isDust", false);
+        if (!isMummy)
+        {
+            Debug.Log(isMummy);
             animator.SetBool("isFight", true);
-
+            audioManager?.PlaySFX(audioManager.dust);                 
         }
     }
 
