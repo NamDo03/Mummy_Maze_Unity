@@ -45,7 +45,11 @@ public class LevelController : MonoBehaviour
         verticalWall = new int[size, size];
         horizontalWall = new int[size, size];
         tranfromMap = size == 6 ? 1f : 0.75f;
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager = FindObjectOfType<AudioManager>();
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager not found in the scene");
+        }
     }
 
     void Start()

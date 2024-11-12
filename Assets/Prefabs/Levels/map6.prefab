@@ -103,3 +103,4 @@ MonoBehaviour:
   winGameScreen: {fileID: 428831748004763474, guid: 1198b20d75969d442becf032be4ac972, type: 3}
   loseGameScreen: {fileID: 2361058804205086836, guid: d7b29238cc163da4f938eb012272ec2b, type: 3}
   size: 6
+  mummyPrefab: {fileID: 2117953829849881064, guid: f36313366d1eebf45b3962820d48537a, type: 3}

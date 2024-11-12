@@ -13,7 +13,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager = FindObjectOfType<AudioManager>();
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager not found in the scene");
+        }
     }
     void Start()
     {
@@ -54,14 +58,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetInteger("moveDirection", 4); 
         }
-        if (gameObject.CompareTag("Player"))
-        {
-            audioManager.PlaySFX(audioManager.footstep);
-        }
-        if (gameObject.CompareTag("MummyWhite") || gameObject.CompareTag("MummyRed"))
-        {
-            audioManager.PlaySFX(audioManager.footstep);
-        }
+        audioManager.PlaySFX(audioManager.footstep);
         Vector3 startPosition = transform.position;
         Vector3 targetPosition = startPosition + direction;
 
@@ -87,15 +84,14 @@ public class PlayerMovement : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            audioManager?.PlaySFX(audioManager.fight);
+            audioManager.PlaySFX(audioManager.fight);
             yield return new WaitForSeconds(0.5f);
         }
         animator.SetBool("isDust", false);
         if (!isMummy)
         {
-            Debug.Log(isMummy);
             animator.SetBool("isFight", true);
-            audioManager?.PlaySFX(audioManager.dust);                 
+            audioManager.PlaySFX(audioManager.dust);                 
         }
     }
 
