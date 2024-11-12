@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class LevelController : MonoBehaviour
 {
@@ -23,7 +21,6 @@ public class LevelController : MonoBehaviour
     int[,] horizontalWall;
     Vector3 stairPosition;
     Vector3 stairDirection;
-    //bool restrictedVision = false;
     AudioManager audioManager;
 
     public class GameState
@@ -101,23 +98,20 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z)) 
-        {
-            Undo();
-        }
-        if (player == null || mummies == null)
-        {
-            return;
-        }
+        if (player == null || mummies == null || mummies.Count == 0 || !idle) return;
         player.UpdateIdleDirection(null);
         foreach (var mummy in mummies)
         {
+            if (mummy == null) continue;
             Vector3 next_move = mummy.tag == "MummyWhite"
                 ? WhiteTrace(mummy.transform.localPosition)
                 : RedTrace(mummy.transform.localPosition);
             mummy.UpdateIdleDirection(next_move);
         }
-        if (!idle) return;
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Undo();
+        }
         Vector3 direction = Vector3.zero;
 
         if (Input.GetKeyDown(KeyCode.W)) direction = Vector3.up;
@@ -363,6 +357,7 @@ public class LevelController : MonoBehaviour
     }
     public void Undo()
     {
+        if (!idle) return;
         if (undoStack.Count > 0)
         {
             GameState previousState = undoStack.Pop();
