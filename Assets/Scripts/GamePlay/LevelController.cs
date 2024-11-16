@@ -16,7 +16,7 @@ public class LevelController : MonoBehaviour
 
     // Static
     public int size;
-    float tranfromMap;
+    float transformMap;
     int[,] verticalWall;
     int[,] horizontalWall;
     Vector3 stairPosition;
@@ -44,7 +44,7 @@ public class LevelController : MonoBehaviour
         mummies = new List<PlayerMovement>();
         verticalWall = new int[size, size];
         horizontalWall = new int[size, size];
-        tranfromMap = size == 6 ? 1f : 0.75f;
+        transformMap = size == 6 ? 1f : 0.75f;
         audioManager = FindObjectOfType<AudioManager>();
         if (audioManager == null)
         {
@@ -59,8 +59,8 @@ public class LevelController : MonoBehaviour
         int n = size;
         foreach (Transform t in transform)
         {
-            int x = (int)(t.localPosition.x/tranfromMap);
-            int y = (int)(t.localPosition.y/tranfromMap);
+            int x = (int)(t.localPosition.x/transformMap);
+            int y = (int)(t.localPosition.y/transformMap);
 
             switch (t.tag)
             {
@@ -72,7 +72,8 @@ public class LevelController : MonoBehaviour
                     mummies.Add(t.GetComponent<PlayerMovement>());
                     break;
                 case "Stair":
-                    stairPosition = t.localPosition;
+                    stairPosition.x = (int)(t.localPosition.x / transformMap);
+                    stairPosition.y = (int)(t.localPosition.y / transformMap);
                     if (x == 0) stairDirection = Vector3.left;
                     if (y == 0) stairDirection = Vector3.down;
                     if (x == n)
@@ -163,8 +164,8 @@ public class LevelController : MonoBehaviour
     // Character vs walls
     bool Blocked(Vector3 position, Vector3 direction)
     {
-        int x = (int)(position.x/tranfromMap);
-        int y = (int)(position.y/tranfromMap);
+        int x = (int)(position.x/transformMap);
+        int y = (int)(position.y/transformMap);
         int n = size - 1;
         if (direction == Vector3.up)
             return y == n || horizontalWall[x, y + 1] == 1;
@@ -184,10 +185,10 @@ public class LevelController : MonoBehaviour
     // Mummies    
     Vector3 WhiteTrace(Vector3 position)
     {
-        int x = (int)(player.transform.localPosition.x / tranfromMap);
-        int y = (int)(player.transform.localPosition.y / tranfromMap);
-        int px = (int)(position.x / tranfromMap);
-        int py = (int)(position.y / tranfromMap);
+        int x = (int)(player.transform.localPosition.x / transformMap);
+        int y = (int)(player.transform.localPosition.y / transformMap);
+        int px = (int)(position.x / transformMap);
+        int py = (int)(position.y / transformMap);
 
         if (x > px)
         {
@@ -207,10 +208,10 @@ public class LevelController : MonoBehaviour
 
     Vector3 RedTrace(Vector3 position)
     {
-        int x = (int)(player.transform.localPosition.x / tranfromMap);
-        int y = (int)(player.transform.localPosition.y / tranfromMap);
-        int px = (int)(position.x / tranfromMap);
-        int py = (int)(position.y / tranfromMap);
+        int x = (int)(player.transform.localPosition.x / transformMap);
+        int y = (int)(player.transform.localPosition.y / transformMap);
+        int px = (int)(position.x / transformMap);
+        int py = (int)(position.y / transformMap);
 
         if (y > py)
         {
@@ -309,8 +310,8 @@ public class LevelController : MonoBehaviour
     // Win and lose
     bool IsWin(Vector3 position)
     {
-        int x = (int)(position.x / tranfromMap);
-        int y = (int)(position.y / tranfromMap);
+        int x = (int)(position.x / transformMap);
+        int y = (int)(position.y / transformMap);
         if (x == stairPosition.x &&  y == stairPosition.y)
         {
             return true;

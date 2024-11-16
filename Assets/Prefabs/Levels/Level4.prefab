@@ -869,7 +869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1475174788998567090, guid: 8ee4df8d74eb7a64cbf4c23893092a5e, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1589515780179607780, guid: 8ee4df8d74eb7a64cbf4c23893092a5e, type: 3}
       propertyPath: m_EdgeRadius
@@ -947,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8983652008202651502, guid: 125ca0c02c4a16e4e9ad998c310fc334, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 8983652008202651502, guid: 125ca0c02c4a16e4e9ad998c310fc334, type: 3}
       propertyPath: m_LocalPosition.y
